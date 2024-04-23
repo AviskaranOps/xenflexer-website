@@ -16,7 +16,7 @@ export const Values = () => {
           Experience the power of choice and clarity with every opportunity,
           only at <br />
           XenFlexer. Powered by XenHire's precision matching, we offer an
-          unrivaled blend <br />
+          unrivalled blend <br />
           of freedom and security. Dive into the best of both worlds with
           XenFlexer, where
           <br /> your contracting career meets unparalleled opportunities and

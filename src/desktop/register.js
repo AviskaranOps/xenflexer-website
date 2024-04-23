@@ -11,6 +11,8 @@ import {
 import logo from "../assets/images/lOGO 1.png";
 import { type } from "@testing-library/user-event/dist/type";
 import axios from 'axios';
+import { Header } from "./header";
+import Box from '@mui/material/Box';
 
 export const Register = () => {
   const [name, setName] = React.useState("");
@@ -25,6 +27,11 @@ export const Register = () => {
     "Join XenFlexer with a new contract I secure independently",
     "Join XenFlexer with my current ongoing project",
   ];
+
+  const position = [
+    "Permanent Positions",
+    "Contract Positions"
+  ]
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -63,51 +70,51 @@ export const Register = () => {
     }
   };
 
+
+  const handlePositionCheckboxChange = (event) => {
+    const { value, checked } = event.target;
+    if (checked) {
+      setInterestedJob([...interestedJob, value]); // Add
+    } else {
+      setInterestedJob(interestedJob.filter((data) => data !== value)); // Remove
+    }
+  };
+
+
+
   return (
+    <>
+    <Header/>
     <div className="grid grid-flow-col">
-      <div className="p-10">
-        <div className="grid justify-center">
-          <img src={logo} alt="logo" />
-          <AvatarGroup max={3} sx={{ justifyContent: "center", marginTop: 3 }}>
-            <Avatar
-              alt="Remy Sharp"
-              src="https://www.gravatar.com/avatar/2c7d99fe281ecd3bcd65ab915bac6dd5?s=250"
-            />
-            <Avatar
-              alt="Travis Howard"
-              src="https://eu.ui-avatars.com/api/?name=Ghelani+Mihir&size=250"
-            />
-            <Avatar
-              alt="Cindy Baker"
-              src="https://avatar.iran.liara.run/public/boy?username=Ash"
-            />
-          </AvatarGroup>
+      <div className="p-10 bg-app-backGround hidden sm:grid">
+          <div className="grid justify-center ">
+            
+          </div>
+          <div className="grid justify-center text-center px-10">
+            <text className="text-app-gray900 text-3xl font-semibold mt-5">
+              Disrupting the Enterprise Contracting
+              <br /> Landscape
+            </text>
+            <text className="text-app-gray text-lg italic font-medium mt-5">
+              Welcome to the XenFlexer Interest Signup, where <br /> we're
+              reshaping the future of enterprise contracting.
+              <br /> XenFlexer is at the forefront of revolutionizing the
+              <br />
+              contracting industry by offering unparalleled
+              <br /> flexibility, transparency, and opportunities for
+              <br /> consultants and clients alike. Whether you're a <br />
+              seasoned professional looking for entry-level or
+              <br /> advanced opportunities, or seeking the right blend of
+              <br /> permanent and contract positions, XenFlexer is your
+              <br /> gateway to a world where your skills are valued and <br />
+              your career aspirations are met. Sign up today to be
+              <br /> part of a community that's set on disrupting the
+              <br /> enterprise contracting landscape, ensuring a more
+              <br /> equitable, efficient, and empowering environment for
+              <br /> everyone involved.
+            </text>
+          </div>
         </div>
-        <div className="grid justify-center text-center px-10">
-          <text className="text-app-gray900 text-3xl font-semibold mt-5">
-            Disrupting the Enterprise Contracting
-            <br /> Landscape
-          </text>
-          <text className="text-app-gray text-lg italic font-medium mt-5">
-            Welcome to the XenFlexer Interest Signup, where <br /> we're
-            reshaping the future of enterprise contracting.
-            <br /> XenFlexer is at the forefront of revolutionizing the
-            <br />
-            contracting industry by offering unparalleled
-            <br /> flexibility, transparency, and opportunities for
-            <br /> consultants and clients alike. Whether you're a <br />
-            seasoned professional looking for entry-level or
-            <br /> advanced opportunities, or seeking the right blend of
-            <br /> permanent and contract positions, XenFlexer is your
-            <br /> gateway to a world where your skills are valued and <br />
-            your career aspirations are met. Sign up today to be
-            <br /> part of a community that's set on disrupting the
-            <br /> enterprise contracting landscape, ensuring a more
-            <br /> equitable, efficient, and empowering environment for
-            <br /> everyone involved.
-          </text>
-        </div>
-      </div>
       <div className="p-10 ">
         <div>
           <text className="text-app-gray900 font-semibold text-3xl">
@@ -116,7 +123,7 @@ export const Register = () => {
         </div>
         <form onSubmit={handleSubmit}>
           <div className="grid mt-8">
-            <label className="text-app-gray700 text-sm font-medium">
+            <label className="text-app-gray700 text-m font-medium">
               Full Name*
             </label>
             <input
@@ -128,7 +135,7 @@ export const Register = () => {
             />
           </div>
           <div className="grid mt-3">
-            <label className="text-app-gray700 text-sm font-medium">
+            <label className="text-app-gray700 text-m font-medium">
               Email*
             </label>
             <input
@@ -141,7 +148,7 @@ export const Register = () => {
             />
           </div>
           <div className="grid mt-3">
-            <label className="text-app-gray700 text-sm font-medium">
+            <label className="text-app-gray700 text-m font-medium">
               Phone number*
             </label>
             <input
@@ -154,51 +161,52 @@ export const Register = () => {
             />
           </div>
           <div className="grid mt-3">
-            <label className="text-app-gray700 text-sm font-medium pb-1">
+            <label className="text-app-gray700 text-m font-medium pb-1">
               What type of job opportunities are you most interested in?*
             </label>
             <RadioGroup
               row
               value={typeJob}
               onChange={(e) => setTypeJob(e.target.value)}>
-              <FormControlLabel
+              <FormControlLabel 
                 name="non-entry"
                 value={"non-entry"}
                 control={<Radio />}
-                label="Non-Entry-Level Positions"
+                label={<Box component="div" className="text-app-gray700 text-sm font-medium pb-1">
+                Non-Entry-Level Positions</Box>}
               />
               <FormControlLabel
                 name="entry"
                 value={"entry"}
                 control={<Radio />}
-                label="Entry-Level Positions"
+                label={<Box component="div" className="text-app-gray700 text-sm font-medium pb-1">
+                Entry-Level Positions
+              </Box>}
               />
             </RadioGroup>
           </div>
           <div className="grid mt-2">
-            <label className="text-app-gray700 text-sm font-medium pb-1">
+            <label className="text-app-gray700 text-m font-medium pb-1">
               Are you interested in permanent or contract job opportunities?*
             </label>
-            <RadioGroup
-              row
-              value={interestedJob}
-              onChange={(e) => setInterestedJob(e.target.value)}>
+            {position.map((options) => (
               <FormControlLabel
-                name="permanent"
-                value={"permanent"}
-                control={<Radio />}
-                label="Permanent Positions"
+                key={options}
+                control={
+                  <Checkbox
+                    value={options}
+                    checked={interestedJob.includes(options)}
+                    onChange={handlePositionCheckboxChange}
+                  />
+                }
+                label={<Box component="div" className="text-app-gray700 text-sm font-medium pb-2">
+                {options}
+              </Box>}
               />
-              <FormControlLabel
-                name="contract"
-                value={"contract"}
-                control={<Radio />}
-                label="Contract Positions"
-              />
-            </RadioGroup>
+            ))}
           </div>
           <div className="grid mt-2">
-            <label className="text-app-gray700 text-sm font-medium pb-1">
+            <label className="text-app-gray700 text-m font-medium pb-1">
               How would you prefer to join our team? (Applicable only if you
               <br />
               selected "Contract Positions" above.)*
@@ -213,7 +221,9 @@ export const Register = () => {
                     onChange={handleAccesCheckboxChange}
                   />
                 }
-                label={options}
+                label={<Box component="div" className="text-app-gray700 text-sm font-medium pb-2">
+                {options}
+              </Box>}
               />
             ))}
           </div>
@@ -233,5 +243,12 @@ export const Register = () => {
         </form>
       </div>
     </div>
+    <footer className="w-full md:px-28 mt-20 mb-10 grid grid-flow-col items-center justify-between">
+        <img src={logo} alt="logo" />
+        <text style={{ color: "#667085" }}>
+          © 2024 Xenspire. All rights reserved.
+        </text>
+      </footer>
+    </>
   );
 };

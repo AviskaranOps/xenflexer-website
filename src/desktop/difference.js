@@ -21,21 +21,21 @@ export const Difference = () => {
     ),
     createData(
       "BENEFITS",
-      "Ala Carte Services for Various Insurance types, 401K, Immigration, HSA etc.",
+      "Ala Carte Services for Various Insurance types, 401K, Immigration, HSA, etc.",
       "Non-standard, but predominantly based on a tiered percentage cut",
       "Flexibility to choose"
     ),
     createData(
-      "COLLOBORATION",
-      "Open Forum Structure to communicate with other Consultants. All Metrics are displayed openly across network.",
+      "COLLABORATION",
+      "Open Forum Structure to communicate with other Consultants. All Metrics are displayed openly the network.",
       "Not Structured",
-      "Clear Expectations & Transparent Operations since Employer has lot to lose"
+      "Clear Expectations & Transparent Operations since the Employer has a lot to lose"
     ),
     createData(
       "COMMUNITY",
-      "All Consultants are part of larger Xenspire Community program/network to yield all the benefits of being together.",
+      "All Consultants are part of a larger Xenspire Community program/network to yield all the benefits of being together.",
       "NO COMMUNITY",
-      "Consultants can grow and improve during their Career. Opportunity to join Direct Client/Permanent Placement"
+      "Consultants can grow and improve during their Careers. Opportunity to join Direct Client/Permanent Placement"
     ),
   ];
 

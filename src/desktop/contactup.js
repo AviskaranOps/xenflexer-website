@@ -2,6 +2,7 @@ import React from "react";
 import { Avatar, AvatarGroup, Button } from "@mui/material";
 import logo from "../assets/images/lOGO 1.png";
 import  axios  from 'axios';
+import { Header } from "./header";
 
 export const ContactUp = () => {
   const [fname, setFName] = React.useState("");
@@ -34,41 +35,29 @@ export const ContactUp = () => {
   };
 
   return (
+    <>
+     <Header/>
     <div className="grid grid-flow-col">
-      <div className="p-10">
-        <div className="grid justify-center">
-          <img src={logo} alt="logo" />
-          <AvatarGroup max={3} sx={{ justifyContent: "center", marginTop: 3 }}>
-            <Avatar
-              alt="Remy Sharp"
-              src="https://www.gravatar.com/avatar/2c7d99fe281ecd3bcd65ab915bac6dd5?s=250"
-            />
-            <Avatar
-              alt="Travis Howard"
-              src="https://eu.ui-avatars.com/api/?name=Ghelani+Mihir&size=250"
-            />
-            <Avatar
-              alt="Cindy Baker"
-              src="https://avatar.iran.liara.run/public/boy?username=Ash"
-            />
-          </AvatarGroup>
+      <div className="p-10 bg-app-backGround hidden sm:grid">
+          <div className="grid justify-center">
+            
+          </div>
+          <div className="grid justify-center text-center px-10">
+            <text className="text-app-gray900 text-3xl font-semibold mt-5">
+              Unlock More Value with
+              <br /> Freedom and Transparency
+            </text>
+            <text className="text-balance text-xl font-normal mt-5">
+              Experience the power of choice and clarity with <br /> every
+              opportunity, only at XenFlexer. Powered
+              <br /> by XenHire's precision matching, we offer an
+              <br /> unrivalled blend of freedom and security. Dive
+              <br /> into the best of both worlds with XenFlexer,
+              <br /> where your contracting career meets <br />
+              unparalleled opportunities and benefits!
+            </text>
+          </div>
         </div>
-        <div className="grid justify-center text-center px-10">
-          <text className="text-app-gray900 text-3xl font-semibold mt-5">
-            Unlock More Value with
-            <br /> Freedom and Transparency
-          </text>
-          <text className="text-balance text-xl font-normal mt-5">
-            Experience the power of choice and clarity with <br /> every
-            opportunity, only at XenFlexer. Powered
-            <br /> by XenHire's precision matching, we offer an
-            <br /> unrivaled blend of freedom and security. Dive
-            <br /> into the best of both worlds with XenFlexer,
-            <br /> where your contracting career meets <br />
-            unparalleled opportunities and benefits!
-          </text>
-        </div>
-      </div>
       <div className="p-10">
         <div className="grid gap-2">
           <text className="text-app-gray900 font-semibold text-3xl">
@@ -148,5 +137,12 @@ export const ContactUp = () => {
         </form>
       </div>
     </div>
+    <footer className="w-full md:px-28 mt-20 mb-10 grid grid-flow-col items-center justify-between">
+        <img src={logo} alt="logo" />
+        <text style={{ color: "#667085" }}>
+          © 2024 Xenspire. All rights reserved.
+        </text>
+      </footer>
+    </>
   );
 };
