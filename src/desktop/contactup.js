@@ -47,7 +47,7 @@ export const ContactUp = () => {
               Unlock More Value with
               <br /> Freedom and Transparency
             </text>
-            <text className="text-balance text-xl font-normal mt-5">
+            <text className="text-app-gray text-m italic font-medium mt-5">
               Experience the power of choice and clarity with <br /> every
               opportunity, only at XenFlexer. Powered
               <br /> by XenHire's precision matching, we offer an

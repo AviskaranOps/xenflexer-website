@@ -1,8 +1,11 @@
 import React from "react";
 import { Avatar, AvatarGroup, Button } from "@mui/material";
 import logo from "../assets/images/lOGO 1.png";
+import { useNavigate } from 'react-router-dom';
 
 export const Footer = () => {
+  const navigate = useNavigate();
+  
   return (
     <div className="px-5">
       <div className="mt-16 grid grid-flow-row text-center justify-center gap-4">
@@ -39,6 +42,7 @@ export const Footer = () => {
         <div>
           <Button
             variant="contained"
+            onClick={() => navigate('/flexersignup')}
             sx={{
               color: "#ffffff",
               fontWeight: 600,

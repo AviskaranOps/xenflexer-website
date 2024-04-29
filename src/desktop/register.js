@@ -95,7 +95,7 @@ export const Register = () => {
               Disrupting the Enterprise Contracting
               <br /> Landscape
             </text>
-            <text className="text-app-gray text-lg italic font-medium mt-5">
+            <text className="text-app-gray text-m italic font-medium mt-5">
               Welcome to the XenFlexer Interest Signup, where <br /> we're
               reshaping the future of enterprise contracting.
               <br /> XenFlexer is at the forefront of revolutionizing the

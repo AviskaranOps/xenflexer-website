@@ -46,7 +46,7 @@ export const Difference = () => {
           Unleash the Power of Your Contracting Potential
         </text>
         <text className="text-white text-lg">
-          Earn more and manage freely with XenFlexer: Outshine the industry with
+          Earn more and manage freely with XenFlexer. Outshine the industry with
           tailored benefits,
           <br /> boundless growth, and a community that learns and prospers
           together.

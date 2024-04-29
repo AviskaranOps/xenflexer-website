@@ -16,7 +16,7 @@ import {
 } from "@mui/material";
 import logo from "../assets/images/lOGO 1.png";
 import line from "../assets/images/Line pattern.png";
-import profile from "../assets/images/Untitled design (5) 1.png";
+import profile from "../assets/images/Frame 6.png";
 import { Link, useNavigate } from 'react-router-dom';
 
 export const Main = () => {
@@ -81,7 +81,7 @@ export const Main = () => {
                   </ListItem>
                   <ListItem key='0'>
                     <Button
-                      onClick={() => navigate("/contactUs")}
+                      onClick={() => navigate("/contact")}
                       fullWidth
                       sx={{
                         borderWidth: 1,
@@ -166,7 +166,7 @@ export const Main = () => {
             </a>
           </li>
           <li className="text-app-gray font-bold">
-            <a href="/contactUs">Contact Us</a>
+            <Link to="/contact">Contact Us</Link>
           </li>
         </ul>
 
@@ -302,7 +302,7 @@ export const Main = () => {
             <div className="grid grid-flow-col text-center pl-8 sm:pl-10 pb-5">
               <text className="text-app-gray900 text-lg font-semibold">IT</text>
               <text className="text-app-gray900 text-lg font-semibold">
-                Health Care
+                HealthCare
               </text>
             </div>
           </Box>
@@ -313,7 +313,7 @@ export const Main = () => {
       <img
         src={line}
         alt="line1"
-        className="absolute bottom-0 left-0 hidden lg:flex"
+        className="absolute -bottom-80 left-0 hidden lg:flex"
       />
       <img
         src={line}

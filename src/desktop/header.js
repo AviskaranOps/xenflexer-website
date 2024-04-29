@@ -160,7 +160,7 @@ export const Header = () => {
             </a>
           </li>
           <li className="text-app-gray font-bold">
-            <a href="/contactUs">Contact Us</a>
+            <Link to="/contact">Contact Us</Link>
           </li>
         </ul>
 

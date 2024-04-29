@@ -3,7 +3,7 @@ import "./App.css";
 import { Desktop } from "./desktop";
 import { Register } from "./desktop/register";
 import { ContactUp } from "./desktop/contactup";
-import { ContactUs } from "./desktop/ContactUs"
+import { Contact_Us } from "./desktop/contact_us";
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
         <Route path="/" element={<Desktop />} />
         <Route path="flexersignup" element={<Register />} />
         <Route path="clientHire" element={<ContactUp />} />
-        <Route path="contactUs" element={<ContactUs />}/>
+        <Route path="contact" element={<Contact_Us />}/>
         <Route path="*" element={<Navigate to={"/"} replace />} />
       </Routes>
     </BrowserRouter>
