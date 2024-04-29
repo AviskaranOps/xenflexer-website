@@ -5,6 +5,7 @@ import { Feature } from "./feature";
 import { Benefit } from "./benefits";
 import { Difference } from "./difference";
 import { Footer } from "./footer";
+import { Reviews } from "../desktop/reviews";
 
 export const Desktop = () => {
   return (
@@ -14,6 +15,7 @@ export const Desktop = () => {
       <Feature />
       <Benefit />
       <Difference />
+      <Reviews/>
       <Footer />
     </div>
   );
