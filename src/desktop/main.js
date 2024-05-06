@@ -252,9 +252,7 @@ export const Main = () => {
               <br /> with Corporate Perks
             </text>
             <text className="text-app-moss200 text-base sm:text-xl mt-4">
-              We're pioneering the crowd-staffing revolution, providing a unique
-              platform where <br /> contractors can embrace the flexibility of
-              contract work without sacrificing the
+            We're pioneering the crowd-staffing revolution, providing a unique platform where <br /> contractors can embrace the flexibility of contract work without sacrificing the
               <br /> perks of corporate life.
             </text>
           </div>
@@ -265,7 +263,7 @@ export const Main = () => {
                 className="bg-white mr-7 rounded-lg p-2 min-w-36"
               />
               <text className="text-app-moss200 text-sm mt-2">
-                We care about your data in our{" "}
+              We care about your data in our {" "}
                 <a
                   style={{ textDecorationLine: "underline" }}
                   href="#privacypolicy">
@@ -293,7 +291,7 @@ export const Main = () => {
           <Box className="shadow-2xl bg-white rounded-3xl px-10">
             <div className="flex justify-center text-center mt-7">
               <text className="text-app-gray900 text-lg font-semibold">
-                Introducing XenFlexer across multiple industry verticals
+              Introducing XenFlexer across multiple industry verticals
               </text>
             </div>
             <div className="flex justify-center ">
@@ -302,7 +300,7 @@ export const Main = () => {
             <div className="grid grid-flow-col text-center pl-8 sm:pl-10 pb-5">
               <text className="text-app-gray900 text-lg font-semibold">IT</text>
               <text className="text-app-gray900 text-lg font-semibold">
-                HealthCare
+                Healthcare
               </text>
             </div>
           </Box>

@@ -16,9 +16,8 @@ export const Benefit = () => {
           Benefits
         </text>
         <text className="text-balance text-xl font-normal mt-5">
-          Simplify Your Contracting Career with Our All-In-One Employer of
-          Record, Payroll <br />& Other Services – Focus on Your Projects, Not
-          Paperwork!
+        Simplify Your Contracting Career with Our All-In-One Employer of Record, Payroll <br />
+        & Other Services – Focus on Your Projects, Not Paperwork!
         </text>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mt-20">
@@ -30,7 +29,7 @@ export const Benefit = () => {
             Employer of Record (EOR):
           </text>
           <text className="text-app-gray">
-            Let us take the reins on compliance, invoicing, and timesheets.
+          Let us take the reins on compliance, invoicing, and timesheets.
           </text>
         </div>
         <div className="grid grid-flow-row justify-center text-center gap-3">
@@ -41,7 +40,7 @@ export const Benefit = () => {
             Benefits Management
           </text>
           <text className="text-app-gray">
-            Comprehensive coverage from health insurance to 401K and beyond.
+          Comprehensive coverage from health insurance to 401K and beyond.
           </text>
         </div>
       </div>
@@ -54,7 +53,7 @@ export const Benefit = () => {
             Support Services
           </text>
           <text className="text-app-gray">
-            Access to attorney support, visa sponsorship, and legal plans.
+          Access to attorney support, visa sponsorship, and legal plans.
           </text>
         </div>
         <div className="grid grid-flow-row justify-center text-center ">
@@ -65,8 +64,7 @@ export const Benefit = () => {
             Family & Education Perks
           </text>
           <text className="text-app-gray">
-            Enhance your life with child and family care options, plus
-            educational benefits.
+          Enhance your life with child and family care options, plus educational benefits.
           </text>
         </div>
       </div>

@@ -15,19 +15,19 @@ export const Feature = () => {
         <div className="grid grid-flow-row justify-center text-center ">
           <text className="text-app-moss font-semibold text-6xl">Direct</text>
           <text className="text-app-gray900 text-lg font-semibold mt-3">
-            Client Placement
+            Client placement
           </text>
         </div>
         <div className="grid grid-flow-row justify-center text-center ">
           <text className="text-app-moss font-semibold text-6xl">MSP</text>
           <text className="text-app-gray900 text-lg font-semibold mt-3">
-            Partner Placement
+            Partner placement
           </text>
         </div>
         <div className="grid grid-flow-row justify-center text-center ">
           <text className="text-app-moss font-semibold text-6xl">Self</text>
           <text className="text-app-gray900 text-lg font-semibold mt-3">
-            Sourced Placement
+            Sourced placement
           </text>
         </div>
       </div>

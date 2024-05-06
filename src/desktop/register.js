@@ -16,6 +16,8 @@ import axios from 'axios';
 import { Header } from "./header";
 import Box from '@mui/material/Box';
 import { Footer } from "./footer";
+import { useNavigate } from 'react-router-dom';
+import { message } from 'antd';
 
 export const Register = () => {
   const history = useLocation();
@@ -39,23 +41,29 @@ export const Register = () => {
     "Contract Positions"
   ]
 
+
+  const navigate = useNavigate();
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+    const full_name = name;
+    const phone_number = no;
+    const job_type = typeJob;
+    const contract_type = jobbType.toString();
+    const joining_preference = joinTeam.toString();
     try{
-      const response = await axios.post("https://xenflexer.northcentralus.cloudapp.azure.com/api/flexer/", {
-        name,
+      const response = await axios.post("https://xenflexer.northcentralus.cloudapp.azure.com/xen/interestsignup", {
+        full_name,
         email,
-        no,
-        typeJob,
-        jobbType,
-        joinTeam
+        phone_number,
+        job_type,
+        contract_type,
+        joining_preference
       });
 
-      if (response.status === 200) {
         console.log("success");
-      } else {
-        console.log("failure");
-      }
+        navigate('/')
+        message.success("Thanks for showing Interest");
     } catch (error) {
       console.error("logni error:", error.message);
     }
@@ -196,7 +204,7 @@ export const Register = () => {
               </div>
               <div className="grid mt-5  items-center">
                 <label className="text-app-gray700 text-base font-medium pb-1">
-                  Type of positons interested in?
+                  Type of positions interested in?
                   <span style={{ color: "red" }}>*</span>
                 </label>
                 {jobType.map((options) => (

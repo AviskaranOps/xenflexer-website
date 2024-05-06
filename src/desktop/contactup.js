@@ -5,6 +5,8 @@ import  axios  from 'axios';
 import { Header } from "./header";
 import { Footer } from "./footer";
 import sales  from "../assets/images/sales.png"
+import { useNavigate } from 'react-router-dom';
+import { message } from 'antd';
 
 export const ContactUp = () => {
   const [fname, setFName] = React.useState("");
@@ -12,21 +14,23 @@ export const ContactUp = () => {
   const [email, setEmail] = React.useState("");
   const [msg, setMsg] = React.useState("");
 
+  const navigate = useNavigate();
   const handleSubmit = async (e) => {
     e.preventDefault();
+    const first_name = fname;
+    const last_name = lname;
+    const work_email = email;
+    const message = msg;
     try{
-      const response = await axios.post("https://xenflexer.northcentralus.cloudapp.azure.com/api/clientHire/", {
-        fname,
-        lname,
-        email,
-        msg
+      const response = await axios.post("https://xenflexer.northcentralus.cloudapp.azure.com/xen/contactsales/", {
+        first_name,
+        last_name,
+        work_email,
+        message
       });
-
-      if (response.status === 200) {
-        console.log("success");
-      } else {
-        console.log("failure");
-      }
+      console.log("success");
+      navigate('/');
+      message.success("Thanks for showing Interest")
     } catch (error) {
       console.error("logni error:", error.message);
     }
@@ -43,7 +47,7 @@ export const ContactUp = () => {
         <div className="p-10 hidden sm:grid">
           <div className="grid justify-center text-center px-10">
             <text className="text-app-gray900 text-2xl font-semibold mt-5">
-              Unlock More Value with Freedom and Transparency
+            Unlock More Value with Freedom and Transparency
             </text>
             <text className="text-black text-xs font-normal -mt-5">
               Experience the power of choice and clarity with every opportunity,

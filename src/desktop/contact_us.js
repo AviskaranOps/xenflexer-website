@@ -3,6 +3,8 @@ import { Header } from "./header";
 import { Button } from "@mui/material";
 import axios from "axios";
 import logo from "../assets/images/lOGO 1.png";
+import { useNavigate } from 'react-router-dom';
+import { message } from 'antd';
 
 
 export const Contact_Us = () => {
@@ -13,23 +15,28 @@ export const Contact_Us = () => {
   const [no, setNo] = React.useState("");
   const [company, setCompany] = React.useState("");
 
+  const navigate = useNavigate();
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+    const first_name = fname;
+    const last_name = lname;
+    const company_name = company; 
+    const phone_number = no;
+    const Reason_for_reaching_out = msg
     try{
-        const response = await axios.post("https://xenflexer.northcentralus.cloudapp.azure.com/api/contactus/", {
-          fname,
-          lname,
+        const response = await axios.post("https://xenflexer.northcentralus.cloudapp.azure.com/xen/contactus/", {
+          first_name,
+          last_name,
           email,
-          msg,
-          no,
-          company
+          Reason_for_reaching_out,
+          phone_number,
+          company_name
         });
   
-        if (response.status === 200) {
+          navigate("/");
+          message.success("Thanks for showing Interest");
           console.log("success");
-        } else {
-          console.log("failure");
-        }
       } catch (error) {
         console.error("logni error:", error.message);
       }

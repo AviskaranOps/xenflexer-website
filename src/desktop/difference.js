@@ -27,7 +27,7 @@ export const Difference = () => {
     ),
     createData(
       "COLLABORATION",
-      "Open Forum Structure to communicate with other Consultants. All Metrics are displayed openly the network.",
+      "Open Forum Structure to communicate with other Consultants. All Metrics are displayed openly across the network",
       "Not Structured",
       "Clear Expectations & Transparent Operations since the Employer has a lot to lose"
     ),
@@ -43,13 +43,11 @@ export const Difference = () => {
     <div className="px-12 md:px-20 lg:px-40 py-10 bg-app-moss overflow-scroll">
       <div className="mt-5 grid grid-flow-row justify-center gap-4 text-center">
         <text className="text-white text-4xl font-semibold">
-          Unleash the Power of Your Contracting Potential
+        Unleash the Power of Your Contracting Potential
         </text>
         <text className="text-white text-lg">
-          Earn more and manage freely with XenFlexer. Outshine the industry with
-          tailored benefits,
-          <br /> boundless growth, and a community that learns and prospers
-          together.
+        Earn more and manage freely with <b>XenFlexer</b>. Outshine the industry with tailored benefits, 
+          <br /> boundless growth, and a community that learns and prospers together.
         </text>
       </div>
       <div className="rounded-lg bg-white mt-10" style={{ minWidth: 650 }}>
